@@ -1,0 +1,1 @@
+loadModule("stablepack", TRUE)
