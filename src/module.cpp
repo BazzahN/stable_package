@@ -6,6 +6,8 @@ using namespace Rcpp;
 
 #include <vector>
 #include <map>
+#include <iostream>
+
 
 std::list<std::vector<int>> stable_matcher_stble(const Rcpp::NumericVector& cv, const Rcpp::NumericVector& A, const Rcpp::NumericVector& B)
 {
@@ -64,15 +66,16 @@ std::list<std::vector<int>> stable_matcher_intgr(const int& n, const Rcpp::Numer
   
     std::vector<int> hld_1;
     std::vector<int> hld_2;
-    int j {0}; 	
-    R_xlen_t k = n;	
+    int j {1}; 
+    int k {1};		
+ 
     for (R_xlen_t i = 1; i < A.size() +1; i++) 
     {
   
     	hld_1.push_back(A[i-1]);
 	hld_2.push_back(B[i-1]);
     
-   	if(i % k  == 0)
+   	if(k % n  == 0)
     	{
     	  A_prefs.insert(std::make_pair(j, hld_1));
 	  B_prefs.insert(std::make_pair(j, hld_2));
@@ -81,6 +84,8 @@ std::list<std::vector<int>> stable_matcher_intgr(const int& n, const Rcpp::Numer
 	  hld_2.clear();
     
     	}
+	
+	k++;
     
    }
 
