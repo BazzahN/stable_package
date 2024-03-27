@@ -7,7 +7,7 @@ using namespace Rcpp;
 #include <vector>
 #include <map>
 
-int stable_matcher(Rcpp::NumericVector cv, Rcpp::NumericVector A, Rcpp::NumericVector B)
+std::list<std::vector<int>> stable_matcher(Rcpp::NumericVector cv, Rcpp::NumericVector A, Rcpp::NumericVector B)
 {
     std::map<int, std::vector<int>> A_prefs;
     std::map<int, std::vector<int>> B_prefs;	
@@ -53,7 +53,7 @@ int stable_matcher(Rcpp::NumericVector cv, Rcpp::NumericVector A, Rcpp::NumericV
         
 
 	
-  return 0;
+  return sol;
   
 }
 
