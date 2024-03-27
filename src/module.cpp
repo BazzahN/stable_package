@@ -6,7 +6,7 @@ using namespace Rcpp;
 #include <vector>
 #include <map>
 
-std::list<std::vector<int>> stable_matcher(int n, Rcpp::NumericVector A, Rcpp::NumericVector B)
+std::list<std::vector<int>> stable_matcher(R_xlen_t n, Rcpp::NumericVector A, Rcpp::NumericVector B)
 {
     std::map<int, std::vector<int>> A_prefs;
     std::map<int, std::vector<int>> B_prefs;	
