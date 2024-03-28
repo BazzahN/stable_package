@@ -9,7 +9,7 @@ using namespace Rcpp;
 #include <iostream>
 
 
-std::list<std::vector<int>> stable_matcher_stble(const Rcpp::NumericVector& cv, const Rcpp::NumericVector& A, const Rcpp::NumericVector& B)
+std::list<std::vector<int>> stable_matcher(Rcpp::NumericVector cv, Rcpp::NumericVector A, Rcpp::NumericVector B)
 {
     std::map<int, std::vector<int>> A_prefs;
     std::map<int, std::vector<int>> B_prefs;	
@@ -21,11 +21,11 @@ std::list<std::vector<int>> stable_matcher_stble(const Rcpp::NumericVector& cv, 
     std::vector<int> hld_1;
     std::vector<int> hld_2;
   
-    for (R_xlen_t i = 0; i < A.size(); i++) 
+    for (R_xlen_t i = 1; i < A.size() +1; i++) 
     {
   
-    	hld_1.push_back(A[i]);
-	hld_2.push_back(B[i]);
+    	hld_1.push_back(A[i-1]);
+	hld_2.push_back(B[i-1]);
     
    	if(i % n  == 0)
     	{
