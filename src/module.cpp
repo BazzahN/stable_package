@@ -21,15 +21,15 @@ std::list<std::vector<int>> stable_matcher_stble(const Rcpp::NumericVector& cv, 
     std::vector<int> hld_1;
     std::vector<int> hld_2;
   
-    for (R_xlen_t i = 1; i < A.size() +1; i++) 
+    for (R_xlen_t i = 0; i < A.size(); i++) 
     {
   
-    	hld_1.push_back(A[i-1]);
-	hld_2.push_back(B[i-1]);
+    	hld_1.push_back(A[i]);
+	hld_2.push_back(B[i]);
     
    	if(i % n  == 0)
     	{
-    	  A_prefs.insert(std::make_pair(cv[j], hld_1));
+    	  A_prefs.insert(std::make_pair(j+1, hld_1));
 	  B_prefs.insert(std::make_pair(cv[j], hld_2));
       	  j++;
           hld_1.clear();
