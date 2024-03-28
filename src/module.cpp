@@ -5,6 +5,7 @@ using namespace Rcpp;
 #include "fun_algo.h"
 
 #include <vector>
+#include <list>
 #include <map>
 #include <iostream>
 
