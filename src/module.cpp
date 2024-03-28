@@ -47,7 +47,7 @@ std::list<std::vector<int>> stable_matcher_vec(Rcpp::NumericVector cv, Rcpp::Num
   
 }
 
-std::list<std::vector<int>> stable_matcher_list(const Rcpp::List& A, const Rcpp::List& B, bool rout = false)
+std::list<std::vector<int>> stable_matcher_list(Rcpp::List A, Rcpp::List B, bool rout = false)
 {
     std::map<int, std::vector<int>> A_prefs;
     std::map<int, std::vector<int>> B_prefs;
