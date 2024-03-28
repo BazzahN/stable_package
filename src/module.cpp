@@ -9,7 +9,7 @@ using namespace Rcpp;
 #include <iostream>
 
 
-std::list<std::vector<int>> stable_matcher_vec(Rcpp::NumericVector cv, Rcpp::NumericVector A, Rcpp::NumericVector B, bool rout = false)
+std::list<std::vector<int>> stable_matcher_vc(Rcpp::NumericVector cv, Rcpp::NumericVector A, Rcpp::NumericVector B, bool rout = false)
 {
     std::map<int, std::vector<int>> A_prefs;
     std::map<int, std::vector<int>> B_prefs;	
@@ -47,7 +47,7 @@ std::list<std::vector<int>> stable_matcher_vec(Rcpp::NumericVector cv, Rcpp::Num
   
 }
 
-std::list<std::vector<int>> stable_matcher_list(Rcpp::List A, Rcpp::List B, bool rout = false)
+std::list<std::vector<int>> stable_matcher_lst(Rcpp::List A, Rcpp::List B, bool rout = false)
 {
     std::map<int, std::vector<int>> A_prefs;
     std::map<int, std::vector<int>> B_prefs;
@@ -72,6 +72,6 @@ std::list<std::vector<int>> stable_matcher_list(Rcpp::List A, Rcpp::List B, bool
 
 RCPP_MODULE(stablepack) 
 {
-function("rcpp_stablem_vec", &stable_matcher_vec);
-function("rcpp_stablem_list", &stable_matcher_list);
+function("rcpp_stablem_vec", &stable_matcher_vc);
+function("rcpp_stablem_list", &stable_matcher_lst);
 }
