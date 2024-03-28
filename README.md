@@ -39,7 +39,8 @@ prefs_Bv # <- Trial "vector" preference tables
 prefs_Al 
 prefs_Bl # <- Trial "list" preference tables
 
-
+```
+```
 //C++ Function
 
 rcpp_stablem_vec(names,prefs_A,prefs_B)
