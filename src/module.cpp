@@ -21,7 +21,7 @@ std::list<std::vector<int>> stable_matcher_stble(Rcpp::NumericVector cv, Rcpp::N
     std::vector<int> hld_1;
     std::vector<int> hld_2;
   
-    for (R_xlen_t i = 1; i < A.size() +1; i++) 
+    for (R_xlen_t i = 1; i < A.size() +1; i++) //Iterates starting at 1 instead of 0 so that the if modulo conditional can break up the vector accordingly
     {
   
     	hld_1.push_back(A[i-1]);
@@ -29,7 +29,7 @@ std::list<std::vector<int>> stable_matcher_stble(Rcpp::NumericVector cv, Rcpp::N
     
    	if(i % n  == 0)
     	{
-    	  A_prefs.insert(std::make_pair(cv[j], hld_1));
+    	  A_prefs.insert(std::make_pair(j+1, hld_1));
 	  B_prefs.insert(std::make_pair(cv[j], hld_2));
       	  j++;
           hld_1.clear();
