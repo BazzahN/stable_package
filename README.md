@@ -60,7 +60,7 @@ rcpp_stablem_vec(names,prefs_A,prefs_B)
 ```
 
 
-## Installing & Running
+# Installing & Running
 
 **stablepackage** can be installed using one of two methods, either a local installation or via **git-hub**, here I will provide a brief tutorial on both methods. Both methods require the package [devtools](https://cran.r-project.org/web/packages/devtools/index.html)-available on CRAN. One can install **devtools** in **RStudio** using the command `install.packages('devtools')`
 
