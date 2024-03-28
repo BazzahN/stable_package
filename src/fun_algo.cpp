@@ -5,6 +5,9 @@
 
 #include "utils.h"
 #include "IS_STABLE.h"
+#include "Rcpp.h"
+using namespace Rcpp;
+
 
 std::list<std::vector<int>> fun_algo(std::map<int,std::vector<int> > F_prefs, std::map<int,std::vector<int> > H_prefs, bool rout = false)
 {
@@ -104,24 +107,24 @@ std::list<std::vector<int>> fun_algo(std::map<int,std::vector<int> > F_prefs, st
        if (IS_STABLE(mtch, F_pref_cpy, H_pref_cpy,false))
         {
 
-        std::cout <<"Stable Match Found! \n" << std::endl;
+        Rcout <<"Stable Match Found! \n" << std::endl;
 
-        std::cout << "Identified Pairings:" << std::endl;
-        std::cout << "Female |" << " " << "Male" << std::endl;
+        Rcout << "Identified Pairings:" << std::endl;
+        Rcout << "  A    |" << " " << " B  " << std::endl;
 
         for(auto i : mtch)
         {
 
-            std::cout << "  " << i[0] << "    |   "  << i[1] << std::endl;
-            std::cout << "-------|-------" << std::endl;
+            Rcout << "  " << i[0] << "    |   "  << i[1] << std::endl;
+            Rcout << "-------|-------" << std::endl;
         }
         }
+	else
+	{
+	    Rcout << "Obtained Match is Unstable" << std::endl;	
+	}
 
     }
-
-
-
-
 
 
     return mtch;

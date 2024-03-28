@@ -9,7 +9,7 @@ using namespace Rcpp;
 #include <iostream>
 
 
-std::list<std::vector<int>> stable_matcher_stble(Rcpp::NumericVector cv, Rcpp::NumericVector A, Rcpp::NumericVector B)
+std::list<std::vector<int>> stable_matcher_stble(Rcpp::NumericVector cv, Rcpp::NumericVector A, Rcpp::NumericVector B, bool rout = false)
 {
     std::map<int, std::vector<int>> A_prefs;
     std::map<int, std::vector<int>> B_prefs;	
@@ -39,20 +39,8 @@ std::list<std::vector<int>> stable_matcher_stble(Rcpp::NumericVector cv, Rcpp::N
     
    }
 
-   std::list<std::vector<int>> sol = fun_algo(A_prefs,B_prefs,false);
+   std::list<std::vector<int>> sol = fun_algo(A_prefs,B_prefs,rout);
 
-   Rcout <<"Stable Match Found! \n" << std::endl;
-
-   Rcout << "Identified Pairings:" << std::endl;
-   Rcout << "Female |" << " " << "Male" << std::endl;
-
-        for(auto i : sol)
-        {
-
-            Rcout << "  " << i[0] << "    |   "  << i[1] << std::endl;
-            Rcout << "-------|-------" << std::endl;
-        }
-        
 
 	
   return sol;
@@ -94,7 +82,7 @@ std::list<std::vector<int>> stable_matcher_intgr(const int& n, const Rcpp::Numer
    Rcout <<"Stable Match Found! \n" << std::endl;
 
    Rcout << "Identified Pairings:" << std::endl;
-   Rcout << "Female |" << " " << "Male" << std::endl;
+   Rcout << "  A    |" << " " << " B  " << std::endl;
 
         for(auto i : sol)
         {
