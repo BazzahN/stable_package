@@ -110,8 +110,9 @@ std::list<std::vector<int>> fun_algo(std::map<int,std::vector<int> > F_prefs, st
         Rcout <<"Stable Match Found! \n" << std::endl;
 
         Rcout << "Identified Pairings:" << std::endl;
-        Rcout << "  A    |" << " " << " B  " << std::endl;
-
+        Rcout << "  A    |" << " " << "  B  " << std::endl;
+	Rcout << "-------|-------" << std::endl;
+		
         for(auto i : mtch)
         {
 
@@ -121,7 +122,8 @@ std::list<std::vector<int>> fun_algo(std::map<int,std::vector<int> > F_prefs, st
         }
 	else
 	{
-	    Rcout << "Obtained Match is Unstable" << std::endl;	
+	    Rcout << "Obtained Match is Unstable:" << std::endl;
+	    Rcout << "Mix or input different preferences tables" << std::endl;
 	}
 
     }
