@@ -31,6 +31,7 @@ stable_marriage(prefsA, prefsB, mix = F, output=T)
   
   
   #Output: "list" of "vector" paris
+---------------------------------------------------------------------------------------------------------------------------
 Enviroment:
 
 prefs_Av
