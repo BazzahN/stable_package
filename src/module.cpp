@@ -57,8 +57,8 @@ std::list<std::vector<int>> stable_matcher_list(const Rcpp::List& A, const Rcpp:
     for (R_xlen_t i = 0; i < A.size(); i++) 
     {
 
-    	my_map.insert(std::make_pair(j, A[i]));
-        my_map.insert(std::make_pair(j, B[i]));
+    	A_prefs.insert(std::make_pair(j, A[i]));
+        B_prefs.insert(std::make_pair(j, B[i]));
         j++;
   
     }
