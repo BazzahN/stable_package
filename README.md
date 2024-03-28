@@ -15,6 +15,8 @@ Imports: Rcpp (>= 1.0.12)
 LinkingTo: Rcpp
 ```
 ## Package Contents (User)
+
+### In file 'stablepackage/blob/main/R/functions.R'
 ```
 #R
 Function(s):
@@ -41,6 +43,8 @@ prefs_Al
 prefs_Bl # <- Trial "list" preference tables
 
 ```
+
+### In file 'stablepackage/blob/main/src/module.cpp'
 ```
 //C++ Function
 
