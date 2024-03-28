@@ -29,7 +29,7 @@ std::list<std::vector<int>> stable_matcher_stble(const Rcpp::NumericVector& cv, 
     
    	if(i % n  == 0)
     	{
-    	  A_prefs.insert(std::make_pair(j+1, hld_1));
+    	  A_prefs.insert(std::make_pair(cv[j], hld_1));
 	  B_prefs.insert(std::make_pair(cv[j], hld_2));
       	  j++;
           hld_1.clear();
