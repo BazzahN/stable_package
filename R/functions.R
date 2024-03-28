@@ -98,27 +98,16 @@ stable_marriage <- function(prefsA, prefsB, mix = F, output=T){
 
 ##Vector
 
-prefs_Av_1 <- c(1,2,4,3,
+prefs_Av <- c(1,2,4,3,
              3,1,4,2,
              3,2,4,1,
              2,1,3,4)
 
-prefs_Bv_1 <- c(3,2,4,1,
+prefs_Bv <- c(3,2,4,1,
              2,1,3,4,
              2,4,1,3,
              3,1,4,2)
 
-#or
-
-prefs_Av_2 <- c(c(1,2,4,3),
-                c(3,1,4,2),
-                c(3,2,4,1),
-                c(2,1,3,4))
-
-prefs_Bv_2 <- c(c(3,2,4,1),
-                c(2,1,3,4),
-                c(2,4,1,3),
-                c(3,1,4,2))
 
 
 ##List
