@@ -1,12 +1,11 @@
 Package: stablepackage
 Type: Package
-Title: What the Package Does in One 'Title Case' Line
+Title: Interfacing an implementaion of the fundamental algorithm in C++ to R
 Version: 1.0
 Date: 2024-02-29
 Author: Harry Newton
 Maintainer: Harry Newton <h.newton3@lancaster.ac.uk>
-Description: One paragraph description of what the package does as one
-        or more full sentences.
+Description: Package includes a function with an R accesible version of the fundamental algorithm initially written in C++.
 License: GPL (>= 2)
 Imports: Rcpp (>= 1.0.12)
 LinkingTo: Rcpp
