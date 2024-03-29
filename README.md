@@ -84,3 +84,11 @@ library(stablepackage)
 ```
 Error: '\M' is an unrecognized escape in character string (<input>:1:22)
 ```
+# Tutorial and Examples
+A brief tutorial with included examples has been written for a Jupyer Notebook with an R kernal, you may access that [here](https://github.com/BazzahN/Stable-Marriage-cpp-R/blob/main/stablepackage_tutorial.ipynb). This also includes the appropriate format and variable type the functions take. 
+
+# C++ Source Code
+
+For a more thorough description of the **C++** code behind the fundamental algorithm used in this package, you may look to my previous Assignment's repository. A link to that can be found [here](https://github.com/BazzahN/Stable-Marriage-cpp)
+
+
