@@ -42,31 +42,7 @@ std::list<std::vector<int>> stable_matcher_vc(Rcpp::NumericVector cv, Rcpp::Nume
 
    std::list<std::vector<int>> sol = fun_algo(A_prefs,B_prefs,rout);
 
-
-	
   return sol;
-  
-}
-
-std::list<std::vector<int>> stable_matcher_lst(Rcpp::List A, Rcpp::List B, bool rout = false)
-{
-    std::map<int, std::vector<int>> A_prefs;
-    std::map<int, std::vector<int>> B_prefs;
-
-    int j {1}; 
-    
-    for (R_xlen_t i = 0; i < A.size(); i++) 
-    {
-
-    	//A_prefs.insert(std::make_pair(j, A[i]));
-        //B_prefs.insert(std::make_pair(j, B[i]));
-        j++;
-  
-    }
-
-   std::list<std::vector<int>> sol = fun_algo(A_prefs,B_prefs,rout);
-
-   return sol;
   
 }
 
@@ -74,5 +50,4 @@ std::list<std::vector<int>> stable_matcher_lst(Rcpp::List A, Rcpp::List B, bool 
 RCPP_MODULE(stablepack) 
 {
 function("rcpp_stablem_vec", &stable_matcher_vc);
-function("rcpp_stablem_list", &stable_matcher_lst);
 }
