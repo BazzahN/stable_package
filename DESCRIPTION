@@ -5,7 +5,7 @@ Version: 1.0
 Date: 2024-03-29
 Author: Harry Newton
 Maintainer: Harry Newton <h.newton3@lancaster.ac.uk>
-Description: Contains an implementation of the 'fundamental algorithm'. Used to obtain a solution of stable matches 
+Description: Contains an implementation of the 'fundamental algorithm'. Which is used to obtain a solution of stable matches 
              based upon the preferences of two sets A and B of identical length. 
                 
 License: GPL (>= 2)
