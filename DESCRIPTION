@@ -5,9 +5,9 @@ Version: 1.0
 Date: 2024-03-29
 Author: Harry Newton
 Maintainer: Harry Newton <h.newton3@lancaster.ac.uk>
-Description: Contains an implementation of the 'fundamental algorithm'[1]; used to obtain a solution of stable matches based upon
-                the preferences of two sets A and B of identical length.
-                [1] Knuth, Donald Ervin. (1996). Stable Marriage and Its Relation to Other Combinatorial Problems: An Introduction to the Mathematical                           Analysis of Algorithms.”, 9-12.
+Description: Contains an implementation of the 'fundamental algorithm'. Used to obtain a solution of stable matches 
+             based upon the preferences of two sets A and B of identical length. 
+                
 License: GPL (>= 2)
 Imports: Rcpp (>= 1.0.12)
 LinkingTo: Rcpp
